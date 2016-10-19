@@ -9,16 +9,14 @@
     <input type="text" class="userName">
     <input type="password" class="passWord">
     <input type="button" class="valBtn" value="登录">
-    <img src="http://192.168.0.110:8080/SpringHibernateWish/verify/code" alt="这是一张图片" id="imgSrc"/>
+    <img src="http://192.168.191.2:8080/SpringHibernateWish/verify/code" alt="这是一张图片" id="imgSrc"/>
     <input type="text" placeholder="验证码" class="imgVal">
     <input type="button" value="换验证码" class="chengeImg"/>
 </section>
 
 <script src="./yuantuan/jquery-2.1.1.js"></script>
 <script src="md5.js"></script>
-
 <script>
-
     $(".chengeImg").click(function () {
         $("#imgSrc").attr("src",$("#imgSrc").attr("src")+ "?nocache=" + new Date().getTime());
     });
@@ -31,7 +29,7 @@
 //        alert(hex_md5(pass));
         $.ajax({
                     type: "post",
-                    url: "http://192.168.0.110:8080/SpringHibernateWish/loginByWeb",
+                    url: "http://192.168.191.1:8080/SpringHibernateWish/loginByWeb",
                     dataType: "JSONP",
                     synec: true,
                     data: {
