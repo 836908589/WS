@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    div{
+        width: 200px;
+        height: 200px;
+        border: 1px solid red;
+        display: none;
+    }
+    .active{
+        background-color: red;
+    }
+</style>
+<body>
+    <div style="display: block;">11111</div>
+    <div>22222</div>
+    <div>33333</div>
+    <span>
+        <input type="button" value="1"/>
+        <input type="button" value="2">
+        <input type="button" value="3">
+    </span>
+
+</body>
+<script src="jquery-2.1.1.js"></script>
+<script>
+
+    $(function () {
+        $('input').click(function () {
+            $('input').attr('class','');
+            $('div').css('display','none');
+            $(this).attr('class','active');
+
+            $('div').eq($(this).index()).css('display','block');
+          /*  alert($('div').eq($(this).index()));*/
+        });
+    });
+
+
+
+/*    var odiv=document.getElementsByTagName('div');
+    var oinput=document.getElementsByTagName('input');
+    for (var i=0;i<oinput.length;i++){
+        oinput[i].index=i;
+        oinput[i].onclick=function(){
+            for (var i=0;i<oinput.length;i++){
+                oinput[i].className="";
+                odiv[i].style.display='none';
+            }
+            this.className='active';//添加class
+            odiv[this.index].style.display='block';
+        }
+
+    }*/
+
+</script>
+</html>

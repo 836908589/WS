@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动画</title>
+</head>
+<body>
+        <input type="button" value="点击" id="previous"/>
+    <script>
+        var pre=document.getElementById("previous");
+/*
+function aa() {
+     function movRight(){
+        alert("movRigh函数");
+
+    }
+    function movLeft() {
+        alert("movLeft函数");
+
+    }
+    return movRight;
+    return movLeft;
+}*/
+
+  var clickFun={
+      movRight:function (){
+          alert("movRigh函数");
+      },movLeft:function (){
+              alert("movLeft函数");
+          }
+  }
+        pre.onclick=function(){
+            clickFun.movLeft();
+        };
+      /*  pre.addEventListener("click",aa.movRight);*/
+
+    </script>
+</body>
+</html>

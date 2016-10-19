@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //第一题
+    function person(name, age, sex) {
+        var person = new Object();
+        person.name = name;
+        person.age = age;
+        person.sex = sex;
+        return person;
+    }
+    //    var zhangsan=new person("张三","18","男");
+    //    document.write("姓名："+zhangsan.name+"</br>"+"年龄："+zhangsan.age+"</br>"+"性别："+zhangsan.sex);
+
+    //第二题 定义一个数组数组里放十个person对象有name，age属性，并按年龄从大到小排序；
+    function personClass(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    var per1 = new personClass("张三", 18);
+    var per2 = new personClass("李四", 19);
+    var per3 = new personClass("张1", 20);
+    var per4 = new personClass("张2", 56);
+    var per5 = new personClass("张3", 47);
+    var per6 = new personClass("张5", 37);
+    var per7 = new personClass("张6", 78);
+    var per8 = new personClass("张7", 45);
+    var per9 = new personClass("张8", 90);
+    var per10 = new personClass("张9", 100);
+    var personArray = [per1, per2, per3, per4, per5, per6, per7, per8, per9, per10];
+    function sortNumber(a, b) {
+        return a - b;
+    }
+    console.log(personArray.sort(sortNumber));
+    function sum(a, b) {
+        alert(a + b);
+    }
+    </script>
+</body>
+</html>

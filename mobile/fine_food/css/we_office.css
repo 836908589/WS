@@ -1,0 +1,59 @@
+.main{
+    width: 100%;
+    height: auto;
+    background-color: #FFE4F1;
+    padding-bottom: 20%;
+}
+h2{
+    padding-top: 20%;
+}
+.art{
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    padding-top: 4%;
+}
+.cont{
+    width: 94%;
+    height: auto;
+    margin: auto;
+    /*border: 1px solid red;*/
+    display: inline-block;
+    margin-left: 3%;
+    margin-right: 3%;
+    padding-top: 2%;
+    padding-bottom: 8%;
+}
+.cont>dt{
+    width: 26%;
+    height: auto;
+    /*border: 1px solid red;*/
+    display: block;
+    float: left;
+}
+.cont>dt>img{
+    width: 100%;
+    height: auto;
+}
+.cont>article{
+    width: 60%;
+    display: block;
+    /*border: 1px solid red;*/
+    float: right;
+}
+.cont>article>h3{
+    width: 100%;
+    height: auto;
+    font-size: 3rem;
+    text-align: left;
+    padding-top: 2%;
+    text-transform: capitalize;
+}
+.cont>article>dd{
+    width: 100%;
+    height: auto;
+    font-size: 2rem;
+    text-align: left;
+    line-height: 4rem;
+    color: #645D5D;
+}

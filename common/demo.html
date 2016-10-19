@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 200px;
+            height: 150px;
+            line-height: 140px;
+            margin: 100px auto;
+            text-align: center;
+            border: 2px solid #000;
+            font-size: 40px;
+            background-color: #efefef;
+        }
+        .mov{
+            width: 100%;
+            height: 150px;
+            background-color: #00CCFF;
+            margin-left:-100%;
+
+        }
+    </style>
+</head>
+<body>
+<div class="container" id="c">
+    <div class="mov"></div>
+</div>
+<script src="jquery-2.1.1.js"></script>
+
+<script>
+    function getDirection(ev) {
+        var mx = ev.clientX,
+                my = ev.clientY;
+        var el = this.offsetLeft,
+                et = this.offsetTop,
+                ew = this.clientWidth,
+                eh = this.clientHeight;
+        var left = mx - el,
+                right = el + ew - mx,
+                top = my - et,
+                bottom = et + eh - my;
+        var min = Math.min.apply(Math, [left, right, top, bottom]);
+        if (min === left) {
+            return "left";
+        } else if (min === right) {
+            return "right";
+        } else if (min === top) {
+            return "top"
+        } else {
+            return "bottom";
+        }
+    }
+
+    document.getElementById("c").onmouseover=function(ev){
+        var dir=getDirection.call(this,ev);
+//        this.innerText=dir;
+        if (dir=="left") {
+           $("#c").mouseover(function () {
+               $(".mov").animate({
+                   marginLeft:"0px",
+               })
+           })
+            var aa=setInterval(function () {
+                $(".mov").css({
+                    marginLeft:"-100%",
+                })
+            },1000);
+
+        }
+        else if(dir=="right") {
+
+        }else if(dir=="top"){
+
+        }
+        else if(dir=="bottom"){
+
+        }
+        clearInterval(aa);
+
+    }
+</script>
+</body>
+</html>

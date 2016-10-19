@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3时钟</title>
+</head>
+
+        <style>
+            #clo{
+                position: relative;
+                border: 1px solid red;
+            }
+            .po_ab{
+                left: 290px;
+                position: absolute;
+            }
+          /*  #sec{
+                transform: rotate(30deg);!*每格子6deg*!
+            }*/
+        </style>
+<body>
+        <div>
+            <img src="images/clockface.jpg" id="clo"/>
+            <img src="images/hourhand.png" class="po_ab" id="hour"/>
+            <img src="images/minhand.png"  class="po_ab" id="min"/>
+            <img src="images/sechand.png"  class="po_ab" id="sec"/>
+        </div>
+        <script>
+            var myHour=document.getElementById("hour");
+            var myMin=document.getElementById("min");
+            var mySec=document.getElementById("sec");
+            function timer() {
+                var mytime=new Date();
+                var h=mytime.getHours();
+                var m=mytime.getMinutes();
+                var s=mytime.getSeconds();
+                myHour.style.transform='rotate('+(h+m/60)*360/12+'deg)';//比如说2:30中的30的把它换算成小时然后算出来时针应该旋转到2与三的中间
+                myMin.style.transform='rotate('+(m+s/60)*6+'deg)';//同理
+                mySec.style.transform='rotate('+s*6+'deg)';//同理
+                /* alert(m);*/
+            }
+            timer();
+            clearInterval(ti);
+            var ti=setInterval(timer,1000);
+        </script>
+</body>
+</html>

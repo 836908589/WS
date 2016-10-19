@@ -1,0 +1,452 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Lantinghei SC", "Microsoft YaHei", "微软雅黑", SimSun, Arial;
+    font-weight: 500;
+    list-style: none;
+}
+
+body, html {
+    background-color: #F0F0F0;
+}
+a {
+    text-decoration: none;
+}
+header {
+    width: 100%;
+    min-width: 1267px;
+    height: 80px;
+    display: inline-block;
+    border-bottom: 1px solid #E5E5E5;
+    background: white;
+    position: fixed;
+    top: 0px;
+    z-index: 999;
+}
+
+header > section {
+    width: 80%;
+    height: auto;
+    display: inline-block;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.logo {
+    width: 175px;
+    height: 40px;
+    float: left;
+    margin-top: 20px;
+}
+
+.logo > img {
+    width: 175px;
+    height: 40px;
+}
+
+nav {
+    width: auto;
+    height: 80px;
+    display: block;
+    float: right;
+}
+
+nav > ul {
+    width: auto;
+    height: 80px;
+    display: block;
+    float: left;
+    margin-left: 30px;
+
+}
+
+nav > ul > li {
+    width: auto;
+    height: 80px;
+    float: left;
+    line-height: 80px;
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+.head_sculpture {
+    width: 40px;
+    height: 80px;
+    margin-right: 0px;
+    margin-left: 84px;
+    float: right;
+}
+
+.head_sculpture > img {
+    width: 40px;
+    height: 40px;
+    margin-top: 18px;
+}
+
+.register {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+}
+
+.reg_flow {
+    width: 80%;
+    height: auto;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 15%;
+}
+
+.reg_title {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+}
+.back_stap{
+    cursor: pointer;
+}
+.register_step {
+    width: 100%;
+    min-width: 1267px;
+    height: 87px;
+    display: inline-block;
+    margin-top: 1%;
+
+}
+
+.register_step > ul > li {
+    float: left;
+    line-height: 87px;
+
+}
+
+.step {
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+
+.step > figure {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: 21px;
+
+}
+
+.step > figure > img {
+    width: 100%;
+    height: auto;
+    margin-top: 12px;
+}
+
+.step > span {
+    width: 100%;
+    height: 24px;
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 24px !important;
+    text-align: center;
+    display: block;
+    position: absolute;
+    top: 76%;
+}
+
+.lineL {
+    width: 298px;
+    border-top: 1px solid #E5E5E5;
+    margin-top: 44px;
+}
+
+.lineS {
+    width: 185px;
+    border-top: 1px solid #E5E5E5;
+    margin-top: 44px;
+}
+
+.circle {
+    width: 16px;
+    height: 16px;
+    border-radius: 16px;
+    border: 1px solid #ccc;
+    margin-top: 33px;
+    margin-left: 22px;
+
+}
+
+.register_form {
+    width: 80%;
+    min-width: 1267px;
+    height: auto;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 4%;
+    padding-bottom: 6%;
+    background-color: white;
+}
+
+.re_for {
+    width: 23.1%;
+    height: auto;
+    margin: auto;
+    display: inline-block;
+    margin-left: 38.45%;
+    margin-right: 38.45%;
+    margin-top: 10%;
+    padding-bottom: 60px;
+}
+
+.re_for > ul > li {
+    width: 100%;
+    height: 60px;
+}
+
+.input_text {
+    width: 294px;
+    height: 46px;
+    position: relative;
+}
+
+.input_text > input {
+    width: 294px;
+    height: 46px;
+    outline: none;
+    border: 1px solid #E5E5E5;
+    text-indent: 46px;
+
+}
+
+.logo_s {
+    width: 14px;
+    height: 16px;
+    background-size: 14px 40px;
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 15px;
+    left: 16px;
+    z-index: 10;
+}
+
+.yzm {
+    width: 34.1%;
+    height: 46px;
+    border: 1px solid #E5E5E5;
+    border-left: 0px solid #E5E5E5;
+    position: absolute;
+    z-index: 12;
+    top: 0px;
+    bottom: 8px;
+    left: 66%;
+}
+
+.yzm > img {
+    width: 100%;
+    height: auto;
+    margin-top: 8px;
+}
+
+.input_sort {
+    width: 65.1% !important;
+}
+
+.logo_user {
+    background-image: url("../img/login-phone.png");
+}
+
+.logo_key {
+    background-image: url("../img/login-calculator.png");
+}
+
+.logo_num {
+    background-image: url("../img/login-num.png");
+}
+
+.agree_part {
+    width: 100%;
+    height: 100%;
+}
+
+.agree {
+    width: 14px;
+    height: 14px;
+    background-size: 14px 40px;
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    margin-top: 18px;
+    margin-left: 30px;
+    background-image: url("../img/remember-me.png");
+    display: inline-block;
+    cursor: pointer;
+}
+
+.skip {
+    width: 230px;
+    height: 14px;
+    display: block;
+    font-size: 12px;
+    float: right;
+    margin-top: 17px;
+    margin-right: 6px;
+}
+
+.next_step {
+    height: 50px !important;
+    text-indent: 0px !important;
+    border-radius: 4px;
+    background: #1F7EDD;
+    color: white;
+    font-size: 18px;
+}
+
+.next_step:hover {
+    background-color: #3F91E4;
+    cursor: pointer;
+}
+
+.code {
+    width: 100px;
+    height: 46px;
+    background: #1F7EDD;
+    color: white;
+    font-size: 14px;
+    line-height: 46px;
+    position: absolute;
+    text-align: center;
+    top: 0px;
+    left: 66.1%;
+    cursor: pointer;
+}
+
+footer {
+    width: 100%;
+    height: 88px;
+    color: #a2a3a4;
+    border-top: 1px solid #E5E5E5;
+    font-size: 14px;
+}
+
+.copyright {
+    width: 80%;
+    min-width: 1267px;
+    height: auto;
+    margin: auto;
+
+}
+
+.copyright > abbr {
+    width: 500px;
+    height: auto;
+    display: block;
+    margin-right: 2%;
+    float: left;
+    margin-left: 0px;
+    line-height: 88px;
+    letter-spacing: 1px;
+}
+
+.right {
+    line-height: 88px;
+    float: right;
+    letter-spacing: 1px;
+}
+.right > span {
+    margin-left: 6px;
+    margin-right: 6px;
+}
+.step2{
+    width: 10px;
+    margin-top: 20px !important;
+}
+.index_text {
+    text-indent: 10px !important;
+}
+.back{
+    font-size: 12px;
+    color: #2E8DED;
+}
+.contact_img{
+    width: 14px;
+    height: 14px;
+    overflow: hidden;
+    float: left;
+    margin-top: 9px;
+    margin-left: 30%;
+}
+.success{
+    width: 100%;
+    height: auto;
+
+}
+.contact_text{
+    width: 80%;
+    height: auto;
+    font-size: 24px;
+    text-align: center;
+}
+.contact_img>img{
+    width: 100%;
+    height: 45px;
+    margin-top: -200%;
+}
+.grey{
+    width: 100%;
+    height: auto;
+    background-color: #F7F7F7;
+    padding-bottom: 20px;
+}
+.grey>h2{
+    width: 100%;
+    height: auto;
+    font-size: 14px;
+    color: #ADADAD;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.stap {
+    width: 80%;
+    height: auto;
+    display: inline-block;
+    margin-left: 10%;
+    margin-right: 10%;
+
+}
+.stap>label{
+    width: 28%;
+    height: auto;
+    float: left;
+    color: #787C81;
+    font-size: 16px;
+     text-align: right;
+}
+.stap>div{
+    width: auto;
+    height: auto;
+    float: left;
+}
+.text{
+    width: auto;
+    height: 20px;
+    border: 2px solid #F0B68E;
+    color:  #F0B68E;
+    font-size: 14px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+.notice{
+    font-size: 12px;
+    color: black;
+}
+.notice>a{
+    color: #2484DF;
+    line-height: 70px;
+}
+.step2,.step3,.step1{
+    display: none;
+}
+.step1{
+    display: block;
+}

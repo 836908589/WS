@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>h5动画</title>
+<style>
+	.main{
+		position:relative;
+		margin:0 auto;
+		height:500px;
+		max-width:30%;
+		background:#606;
+	}
+	.liner_div{
+		position:relative;
+		min-width:100%;
+		min-height:100%;
+		background:#06C;
+		cursor:pointer;
+		padding:2em;
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+	}
+	.liner_div::before,
+	.liner_div::after{
+		position:absolute;
+		left:30px;
+		top:30px;
+		right:30px;
+		bottom:30px;
+		content:'';
+		opacity:0;
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+		-webkit-transition: -webkit-transform 0.35s;
+		transition: transform 0.35s;
+	}
+	.liner_div::before{
+		border-top: 1px solid #fff;
+		border-bottom: 1px solid #fff;
+		transform:scale(0,1);
+	}
+	.liner_div::after{
+		border-right: 1px solid #fff;
+		border-left: 1px solid #fff;
+		transform: scale(1,0);
+	}
+	.main:hover .liner_div::before,
+	.main:hover .liner_div::after {
+	opacity: 1;
+	-webkit-transform: scale(1,1) ;
+	transform: scale(1,1) ;
+}
+</style>
+</head>
+
+<body>
+	<div class="main">
+    	<div class="liner_div"></div>
+    </div>
+</body>
+
+</html>

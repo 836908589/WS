@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    console.log("日期串转字符串："+"\n");
+    var da=new Date();
+    var year=da.getFullYear();
+    var month=da.getMonth()+1;
+    var day=da.getDate();
+    console.log(year+"/"+month+"/"+day);
+    ////////////////////////////////////////
+    console.log("字符串转日期："+"\n");
+    var string=("2016-09-04");
+    var str=string.replace(/-/g,"/");
+    console.log(str)
+</script>
+</body>
+</html>

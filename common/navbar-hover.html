@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>导航菜单移入效果demo</title>
+</head>
+    <style>
+        *{
+            font-family: "微软雅黑";
+        }
+        li{
+            list-style: none;
+        }
+        nav>ul>li{
+            width: 300px;
+            height: 50px;
+            border: 1px solid green;
+            position: relative;
+            text-align: center;
+            line-height: 50px;
+            background-color: inherit;
+            z-index: 99;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .Snav{
+            position: absolute;
+            left: 260px;
+            top: 0px;
+            text-align: center;
+            line-height: 50px;
+        }
+        .bg{
+            width: 0px;
+            height: 50px;
+            position: absolute;
+            background-color: burlywood;
+            top: 0px;
+            z-index: 0;
+        }
+        .li{
+            text-align: center;
+            position: absolute;
+            overflow: hidden;
+            cursor: pointer;
+            left: 100px;
+            z-index: 99;
+        }
+        .fri{
+            border-bottom: none;
+        }
+        .fri:last-of-type{
+            border-bottom: 1px solid green;//边框设为1px
+        }
+        .fri:hover .bg{
+            width: 300px;
+            transition: all .3s;
+        }
+        .fri:hover{
+            overflow: visible;
+            transition: all 0.3s linear;
+        }
+        nav>ul>li:hover a{
+            color: white;
+        }
+        .Sbg{
+            width: 0px;
+            height: 50px;
+            background-color: palegoldenrod;
+            position: absolute;
+            top: 0px;
+            z-index: -1;
+        }
+        .Snav_li{
+            width: 300px;
+            height: 50px;
+            border: 1px solid green;/*边框设为1px*/
+            border-bottom: none;/*边框设为1px*/
+            position: relative;
+        }
+        .Snav_li:last-of-type{
+            border-bottom: 1px solid green;
+        }
+        .Snav_li:hover{
+            color: white;
+        }
+        .Snav_li:hover .Sbg{
+            width: 300px;
+            transition: all .3s linear;
+        }
+    </style>
+<body>
+    <nav>
+        <ul>
+            <li class="fri">
+                <a class="li">一级子菜单</a>
+                <div class="bg"></div>
+
+                <ul class="Snav">
+                    <li class="Snav_li">二级级子菜单
+                        <div class="Sbg"></div>
+                    </li>
+
+                    <li class="Snav_li">二级子菜单
+                        <div class="Sbg"></div>
+                    </li>
+                </ul>
+            </li>
+
+
+            <li class="fri">
+                <a class="li">一级子菜单</a>
+                <div class="bg"></div>
+
+                <ul class="Snav">
+                    <li class="Snav_li">二级级子菜单
+                        <div class="Sbg"></div>
+                    </li>
+
+                    <li class="Snav_li">二级子菜单
+                        <div class="Sbg"></div>
+                    </li>
+
+                    <li class="Snav_li">二级子菜单
+                        <div class="Sbg"></div>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="fri">
+                <a class="li">一级子菜单</a>
+                <div class="bg"></div>
+
+                <ul class="Snav">
+                    <li class="Snav_li">二级级子菜单
+                        <div class="Sbg"></div>
+                    </li>
+
+                    <li class="Snav_li">二级子菜单
+                        <div class="Sbg"></div>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="fri">
+                <a class="li">一级子菜单</a>
+                <div class="bg"></div>
+
+                <ul class="Snav">
+                    <li class="Snav_li">二级级子菜单
+                        <div class="Sbg"></div>
+                    </li>
+
+                    <li class="Snav_li">二级子菜单
+                        <div class="Sbg"></div>
+                    </li>
+                    <li class="Snav_li">二级子菜单
+                        <div class="Sbg"></div>
+                    </li>
+                    <li class="Snav_li">二级子菜单
+                        <div class="Sbg"></div>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="fri">
+                <a class="li">一级子菜单</a>
+                <div class="bg"></div>
+            </li>
+
+        </ul>
+    </nav>
+
+
+
+
+
+        <script>
+
+        </script>
+</body>
+</html>

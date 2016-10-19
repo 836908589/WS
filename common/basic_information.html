@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人信息</title>
+</head>
+<style>
+    * {
+        padding: 0px auto;
+        margin: 0px auto;
+        font-family: "微软雅黑";
+    }
+
+    .basic_info {
+        width: 68%;
+        height: auto;
+        margin: auto;
+        /*border: 1px solid red;*/
+    }
+
+    .basic_info > h1 {
+        width: 100%;
+        height: auto;
+        font-weight: 400;
+        display: inline-block;
+        text-align: center;
+        font-size: 26px;
+        color: #1383b9;
+        font-family: "宋体";
+        padding-top: 4%;
+    }
+
+    .basic_info > h3 {
+        width: 100%;
+        height: auto;
+        text-align: center;
+        font-weight: 400;
+        color: #7e7076;
+        display: inline-block;
+        padding-top: 2%;
+    }
+
+    .perfect_info {
+        width: 60%;
+        height: auto;
+        border: 1px solid #999;
+        margin-top: 2%;
+    }
+
+    .perfect_info > h3 {
+        width: 100%;
+        height: auto;
+        text-align: center;
+        font-weight: 400;
+        color: #7e7076;
+        display: inline-block;
+        padding-top: 2%;
+        color: #1383b9;
+    }
+
+    #perfect_info {
+        width: 60%;
+        height: auto;
+        padding-bottom: 1%;
+        margin-left: 30%;
+        /*border: 1px solid palevioletred;*/
+
+    }
+
+    .part > span {
+        width: 100%;
+        height: auto;
+        display: block;
+        letter-spacing: 3px;
+        padding-top: 6%;
+        padding-bottom: 4%;
+    }
+
+    .part> input {
+        width: 60%;
+        height: 26px;
+        border: 1px solid #666;
+        border-radius: 4px;
+        margin-bottom: auto;
+    }
+    #perfect_info>button{
+        width: 60%;
+        height: 36px;
+        display: inline-block;
+        border: 1px solid  #666;
+        background-color: #B9D6AA;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 10%;
+        color: black;
+    }
+    .skip{
+        width: 60%;
+        height: auto;
+        display: inline-block;
+        text-align: right;
+        color: #3153B2;
+        padding-top: 10%;
+    }
+    .skip>a{
+       text-decoration: underline;
+        cursor: pointer;
+    }
+    .part{
+        width: 100%;
+        height: auto;
+        /*border: 1px solid saddlebrown;*/
+    }
+    .part>div{
+        width: 35%;
+        height: 26px;
+        float: right;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        color: red;
+        font-size: 12px;
+        vertical-align: bottom;
+        /*border: 1px solid red;*/
+        line-height: 26px;
+    }
+</style>
+<body>
+<section class="basic_info">
+    <h1>如愿</h1>
+    <h3>希望你要的自由和美好都能如愿</h3>
+    <section class="perfect_info">
+        <h3>完善个人信息</h3>
+        <form method="post" action="#" id="perfect_info">
+
+            <div class="part">
+                <span>昵称：</span>
+                <input type="text" value=""/>
+                <div>sdsdsdadasdadsadad</div>
+            </div>
+
+            <div class="part">
+                <span>姓名：</span>
+                <input type="text" value=""/>
+                <div></div>
+            </div>
+            <div class="part">
+                <span>性别：</span>
+                <input type="text" value=""/>
+                <div></div>
+            </div>
+            <div class="part">
+                <span>生日：</span>
+                <input type="text" value=""/>
+                <div></div>
+            </div>
+            <div class="part">
+                <span>爱好：</span>
+                <input type="text" value=""/>
+                <div></div>
+            </div>
+            <button>保存</button>
+            <div class="skip">
+                <a>跳过</a>
+            </div>
+        </form>
+    </section>
+</section>
+</body>
+</html>

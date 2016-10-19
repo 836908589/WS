@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+    <style>
+         *{
+             padding: 0px;
+             margin: 0px;
+         }
+      /*  div{
+            width: 100px;
+            height: 30px;
+            border: 1px solid black;
+            text-align: center;
+            line-height: 30px;
+            margin-top: 50px;
+          margin-left: 50px;
+
+
+        }*/
+        @keyframes do {
+         0%{
+             margin-left: 56px;
+         }
+            10%{
+                margin-left: 50px;
+            }
+            20%{
+                margin-left: 44px;
+            }
+            30%{
+                margin-left: 50px;
+            }
+            40%{
+                margin-left: 56px;
+            }
+            50%{
+                margin-left: 50px;
+            }
+            60%{
+                margin-left: 44px;
+            }
+            70%{
+                margin-left: 50px;
+            }
+            80%{
+                margin-left: 56px;
+            }
+            100%{
+                margin-left: 50px;
+            }
+        }
+   /*     div:hover{
+            animation: do .3s infinite;
+            animation-iteration-count: 3;
+            cursor: pointer;
+        }*/
+
+        .main{
+            width:200px;
+            height: 200px;
+            border: 1px solid red;
+            margin: auto;
+            position: relative;
+        }
+
+        #left{
+            width: 99px;
+            height: 200px;
+            border: 1px solid red;
+            overflow: hidden;
+            position: absolute;
+        }
+     /*    .left{
+             width: 160px;
+             height: 160px;
+             border-left: 8px solid black;
+             border-bottom: 8px solid black;
+             border-right: 8px solid transparent;
+             border-top: 8px solid transparent;
+             border-radius: 100%;
+             position: absolute;
+             transform: rotate(45deg);
+         }*/
+         .main:hover .left{
+             transform: rotate(230deg);
+             transition: all 1s linear;
+         }
+
+
+
+         .main:hover .right{
+             transform: rotate(220deg);
+             transition: all 5s linear;
+         }
+         #right{
+             width: 99px;
+             height: 200px;
+             border: 1px solid red;
+             overflow: hidden;
+             position: absolute;
+             border: 1px solid red;
+         }
+         .right{
+             width: 160px;
+             height: 160px;
+             left: 50%;
+             border-left: 8px solid transparent;
+             border-right: 8px solid black;
+             border-top: 8px solid black;
+             border-bottom: 8px solid transparent;
+             border-radius: 100%;
+             position: absolute;
+             transform: rotate(45deg);
+         }
+    </style>
+<body>
+
+        <div class="main">
+            <div id="left">
+                <div class="left"></div>
+            </div>
+           <div id="right">
+                <div class="right"></div>
+           </div>
+        </div>
+
+
+      <div>移入抖动</div>
+</body>
+</html>

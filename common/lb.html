@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    span{
+        width: 300px;
+        height: 200px;
+        display: inline-block;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 20px;
+        display: none;
+    }
+    #main{
+        width:300px;
+        height: 200px;
+        margin: auto;
+        border: 1px solid red;
+        overflow: hidden;
+        position: relative;
+    }
+    .sel{
+        width: 12%;
+        height: auto;
+        flex-wrap: wrap;
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        margin-top: 2%;
+    }
+    input{
+        width: 40px;
+        height: 20px;
+        background-color: skyblue;
+        border: 1px solid skyblue;
+        color: white;
+        flex-grow: 8;
+        margin-left: 2px;
+
+    }
+</style>
+<body>
+    <div id="main">
+        <span>第一个</span>
+        <span>第二个</span>
+        <span>第三个</span>
+    </div>
+    <div class="sel">
+        <input type="button" value="1"/>
+        <input type="button" value="2"/>
+        <input type="button" value="3"/>
+    </div>
+
+
+    <script>
+            var sp=document.getElementsByTagName("span");
+            var pt=document.getElementsByTagName("input");
+        for(var i=0;i<pt.length;i++){
+            var pto=pt[i];
+            pto.onclick=function (){
+                for(var i=0;i<sp.length;i++){
+                    var spi=sp[i];
+                    spi.style.display="block";
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>

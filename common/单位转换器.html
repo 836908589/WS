@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>单位转换器</title>
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        font-family: "微软雅黑";
+    }
+    section{
+        width: 30em;
+        height: auto;
+        margin: auto;
+        margin-top: 10%;
+    }
+    input{
+        width: 10em;
+        height:3em;
+        border: 2px solid #3a8002;
+    }
+    div>input{
+        margin: auto;
+    }
+</style>
+<body>
+    <section>
+        <div>
+            <span>PX</span>
+            <input type="text" placeholder="输入px值" id="pxName"/>
+            <input type="button" value="计算" id="myCount">
+            <input type="text" placeholder="输出em值" id="emName"/>
+            <span>EM</span>
+
+        </div>
+    </section>
+    <script>
+        var pxName=document.getElementById("pxName");
+        var emName=document.getElementById("emName");
+        var myCount=document.getElementById("myCount");
+
+        myCount.onclick=function () {
+            var emValue=emName.value;
+            console.log(emValue);
+            if(emValue==""){
+                var pxValue=pxName.value;
+                var equal=pxValue*0.0625;
+                emName.value=equal;
+            }else if(emValue!=""){
+                var equal=emValue*16;
+                pxName.value=equal;
+            }
+        }
+    </script>
+
+</body>
+</html>

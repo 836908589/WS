@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        font-family: "微软雅黑";
+    }
+
+    #tab tr td {
+        width: 200px;
+        height: 50px;
+        text-align: center;
+    }
+
+    #tab tr td:last-child {
+        cursor: pointer;
+        color: red;
+    }
+</style>
+<body>
+<table border="1" id="tab">
+</table>
+
+
+<script src="jquery-2.1.1.js"></script>
+<script>
+    var tab = $("#tab");
+    var tr = $("tr");
+    function person(id, name, sex, age, address) {
+        var p = new Object();
+        p.id = id;
+        p.name = name;
+        p.sex = sex;
+        p.age = age;
+        p.address = address;
+        return p;
+    }
+
+    var p1 = person(1, "张三", "男", 13, "上海");
+    var p2 = person(2, "李四", "男", 20, "北京");
+    var p3 = person(3, "sala", "女", 16, "深圳");
+    var p4 = person(4, "myse", "女", 40, "成都");
+    var p5 = person(5, "myse", "男", 40, "成都");
+    var parr = [p1, p2, p3, p4, p5];
+     console.log(parr.length);
+    //添加删除元素
+    var count = 0;
+    function addInfo(obj) {
+        for (var i = 0 in obj) {
+            tr.eq(count).append("<td>" + obj[i] + "</td>");
+
+        }
+        tr.eq(count).append("<td class='del'>删除</td>").click(function () {
+                    $(this).remove();
+                }
+        )
+        count++;
+    }
+    /*添加内容*/
+    for (var n = 0; n <=parr.length; n++) {
+        addInfo(parr[n]);
+    }
+
+
+</script>
+</body>
+</html>

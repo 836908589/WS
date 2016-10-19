@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <meta charset="utf-8">
+    <script src="angular.js"></script>
+</head>
+<body>
+Your name: <input type="text" value="sadasda" ng-model="name">
+<hr>
+Hello {{name || 'World'}}!
+<script>
+
+
+
+       var p2={
+            name:'张三',
+            age:'18',
+            number:'123455',
+            al1:function () {
+                console.log("aaaaaaaaaaaaaaaaaaaaa");
+                return 000;
+            },
+            al2:function () {
+                console.log("bbbbbbbbbbbbbbbbbbbbb");
+            }
+        };
+
+   /* function aa(obj) {
+        obj.name="222";
+    }*/
+    console.log(p2.al1());//外面这个打印是返回al1的结果所以打印是undefined；
+</script>
+</body>
+</html>

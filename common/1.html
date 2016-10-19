@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+    <style>
+        .trans_fade_image {
+            position:absolute;
+            -webkit-transition: opacity 1s ease-in-out;
+            -moz-transition: opacity 1s ease-in-out;
+            -o-transition: opacity 1s ease-in-out;
+            transition: opacity 1s ease-in-out;
+        }
+        .trans_fade_image_click {
+            opacity:0;
+            filter: alpha(opacity=0);
+        }
+    </style>
+<body>
+<div id="testBox" class="demo">
+    <img class="trans_fade_image" src="http://image.zhangxinxu.com/image/study/p/s200/ps6.jpg" />
+    <img src="http://image.zhangxinxu.com/image/study/p/s200/ps4.jpg" />
+</div>
+    <script>
+        var img=document.getElementsByTagName("img")[0];
+        img.onclick=function (){
+            var CN=this.className;
+           if(/click/.test(CN)){
+               this.className="trans_fade_image";
+           }else{
+               this.className="trans_fade_image trans_fade_image_click";
+           }
+        }
+    </script>
+</body>
+</html>

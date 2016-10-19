@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>scrollTop</title>
+</head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .first{
+            width: 100%;
+            height: 900px;
+            background-color: #00b3ee;
+        }
+        .second{
+            width: 100%;
+            height: 900px;
+            background-color: black;
+        }
+        .third{
+            width: 100%;
+            height: 900px;
+            background-color: greenyellow;
+        }
+        .fourth{
+            width: 100%;
+            height: 900px;
+            background-color: darkkhaki;
+        }
+        .fifth{
+            width: 100%;
+            height: 900px;
+            background-color: chocolate;
+        }
+    </style>
+<body>
+    <div class="first"></div>
+    <div class="second"></div>
+    <div class="third"></div>
+    <div class="fourth"></div>
+    <div class="fifth"></div>
+
+    <script src="jquery-2.1.1.js"></script>
+    <script>
+  /*      myresize();
+        $(function(){
+            $(window).resize(function () {
+                myresize();
+            })
+        })
+        function myresize() {
+            $("div").css({"height":$(window).height()});
+        }*/
+  var fir=$(".first").height();
+  var sec=$(".second").height();
+  var thi=$(".third").height();
+  var fou=$(".fourth").height();
+  var fif=$(".fifth").height();
+
+
+  $(window).scroll(function () {
+      var scl=$(window).scrollTop();
+     if(scl>1&&scl<sec){
+         var aa=$(window).scrollTop(sec);
+
+
+      }else if(scl>sec&&scl>=aa){
+          $(window).scrollTop(thi);
+      }else if(scl>thi&&scl>=fou){
+          $(window).scrollTop(fou);
+      }else if(scl>fou&&scl>=fif){
+          $(window).scrollTop(fif);
+      }
+  })
+
+
+  /*    setInterval(function(){
+          var sTop=$(window).scrollTop();
+          alert(sTop)
+      },1000);*/
+
+    </script>
+</body>
+
+</html>

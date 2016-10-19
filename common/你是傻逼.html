@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    *{
+        font-family: "微软雅黑";
+    }
+    #main{
+        width: 600px;
+        height: 300px;
+        border: 1px solid black;
+        margin: auto;
+        margin-top: 100px;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+    }
+    img{
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: -100px;
+        transition: all 1s linear;
+    }
+    h1{
+
+        position: absolute;
+        left: -170px;
+        transition: all 1s linear;
+    }
+    h2{
+        position: absolute;
+        transition: all 1s linear;
+        top: 280px;
+        left: 300px;
+    }
+    h3{
+        position: absolute;
+        transition: all 1s linear;
+        top: 280px;
+        left: 300px;
+    }
+    h4{
+        position: absolute;
+        transition: all 1s linear;
+        top: 220px;
+        left: -100px;
+    }
+</style>
+<body>
+    <div id="main">
+        <img src="赞赞.png">
+        <h1>你是傻逼&ensp;?</h1>
+        <h2>Yes?</h2>
+        <h3>Or</h3>
+        <h4>No?</h4>
+    </div>
+<script src="jquery-2.1.1.js"></script>
+</body>
+        <script>
+
+            var mou={
+                img:function () {
+                        $("img").css({"top":"100px","left":"50px","transform":"rotate(720deg)"});
+                    },
+                h1:function () {
+                        $("h1").css({"left":"250px","transform":"skew(30deg,360deg) rotate(380deg)"});
+                    },
+                h2:function () {
+                    $("h2").css({"top":"100px","transform":"rotate(320deg)"})
+                    },
+                h3:function () {
+                    $("h3").css({"top":"160px","transform":"rotate(160deg)"})
+                    },
+                h4:function () {
+                    $("h4").css({"left":"300px","transform":"rotate(380deg) skew(20deg)"})
+                    }
+            };
+                setInterval(mou.img,200);
+                setInterval(mou.h1,2000);
+                setInterval(mou.h2,2500);
+                setInterval(mou.h3,3500);
+                setInterval(mou.h4,4000);
+
+
+
+        </script>
+</html>

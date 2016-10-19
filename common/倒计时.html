@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>倒计时</title>
+</head>
+
+<body>
+	<form action="" method="post">
+    	<label>手机号:</label>
+        <input name="mobile"  id="mobile" type="text"/>
+        <button id="btn_validate" type="button"> 获取验证码</button>
+    </form>
+    <script src="jquery-2.1.1.js"></script>
+    <script>
+		
+    	$(function(){	
+				var time=3;
+				var intervalObj;
+				$("#btn_validate").bind("click",sendCode);
+				function setBtnValue(){
+					time--;
+					if(time==0){
+						$("#btn_validate").text("重新发送");
+						time=3;
+						if(intervalObj!=null){
+							window.clearInterval(intervalObj);
+						}
+						$("#btn_validate").bind("click",sendCode)
+					}else{
+						$("#btn_validate").text(time+"s");
+					}
+				}
+				function sendCode(){
+					var mobile=$("#mobile").val();
+					if(mobile!=null && mobile!= undefined && mobile!=""){
+						//1、请求服务器发送验证码
+						//2、按钮显示为倒计时
+						intervalObj=window.setInterval(setBtnValue,1000);
+					}else{
+						alert("请输入手机号码");
+					}	
+					$("#btn_validate").unbind("click");
+				}
+		})
+    </script>
+</body>
+
+</html>

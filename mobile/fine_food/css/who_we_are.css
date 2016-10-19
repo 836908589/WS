@@ -1,0 +1,28 @@
+.main{
+    width: 100%;
+    height: auto;
+    background-color: #FFE4F1;
+    padding-bottom: 20%;
+}
+.main>h2{
+    padding-top: 20%;
+}
+.img_who{
+    width: 100%;
+    height: auto;
+}
+.img_who{
+    width: 100%;
+    height: auto;
+    padding-top: 6%;
+}
+.img_who>figure{
+    width: 90%;
+    height: auto;
+    margin: auto;
+}
+.img_who>figure>img{
+    width: 100%;
+    height: auto;
+
+}

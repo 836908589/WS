@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    table {
+        width: 100%;
+        height: auto;
+        border-collapse: collapse;
+        margin: auto;
+        font-family: "微软雅黑";
+        font-size: 16px;
+    }
+
+    table tr td {
+        width: 10%;
+        height: 50px;
+        text-align: center;
+    }
+
+    .del {
+        width: 100px;
+        height: 40px;
+        background-color: grey;
+        border: 1px solid grey;
+        color: white;
+    }
+</style>
+<body>
+<table border="1" id="tab">
+    <tr>
+        <td>ID</td>
+        <td>姓名</td>
+        <td>性别</td>
+        <td>年龄</td>
+        <td>地址</td>
+        <td>操作</td>
+    </tr>
+</table>
+<script>
+    var del = document.getElementsByClassName("del");
+    var trr = document.getElementsByClassName("trr");
+    var tab = document.getElementById("tab");
+    function person(id, name, sex, age, address) {
+        var p = new Object();
+        p.id = id;
+        p.name = name;
+        p.sex = sex;
+        p.age = age;
+        p.address = address;
+        return p;
+    }
+
+    var p1 = person(1, "张三", "男", 13, "上海");
+    var p2 = person(2, "李四", "男", 20, "北京");
+    var p3 = person(3, "sala", "女", 16, "深圳");
+    var p4 = person(4, "myse", "女", 40, "成都");
+    var p5 = person(5, "zhafa", "女", 40, "成都");
+    var p_array = [p1, p2, p3, p4, p5];
+
+    for (var i = 0; i < trr.length; i++) {
+        if (i % 2 == 0) {
+            this.style.backgroundColor = "red";
+        }
+    }
+
+    for (var i = 0; i < p_array.length; i++) {
+        tab.innerHTML += "<tr class='trr'>" +
+                "<td>" + p_array[i].id + "</td>" +
+                "<td>" + p_array[i].name + "</td>" +
+                "<td>" + p_array[i].sex + "</td>" +
+                "<td>" + p_array[i].age + "</td>" +
+                "<td>" + p_array[i].address + "</td>" +
+                "<td><input type='button' value='删除'  class='del'></td>" +
+                "</tr>";
+    }
+    for (var i = 0; i < del.length; i++) {
+        del[i].onclick = function () {
+            this.parentNode.parentNode.remove();
+        }
+    }
+</script>
+</body>
+</html>

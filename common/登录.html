@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+</head>
+<style>
+    div{
+        width: 30%;
+        height: auto;
+        margin: auto;
+    }
+</style>
+<body>
+    <div>
+        <input type="text" class="userName" placeholder="请输入用户名"/><br>
+        <input type="password" class="passWord" placeholder="请输入密码"/><br>
+        <input type="button" class="login" value="登录"/>
+    </div>
+
+    <script src="jquery-2.1.1.js"></script>
+    <script>
+        var user=$(".userName");
+        var pass=$(".passWord");
+        var log=$(".login");
+        var count=0
+function login() {
+    log.click(function () {
+        var uVal=user.val();
+        var pVal=pass.val();
+        /*console.log(uVal)*/
+        if(uVal==""){
+            alert("请输入用户名");
+        }else if (uVal=="admin"){
+            alert("用户名正确");
+        }
+        if(pVal==""){
+            alert("请输入密码");
+        }else if(pVal=="hello"){
+            alert("密码正确");
+        }
+        if(uVal=="admin"&&pVal=="hello"){
+            window.open('http://www.baidu.com');
+        }
+        count++;
+        console.log(count);
+        if(count==3){
+            window.open('http://www.baidu.com');
+        }
+    })
+
+
+}
+
+   login();
+
+
+       /* console.log(cc)*/
+    </script>
+</body>
+</html>

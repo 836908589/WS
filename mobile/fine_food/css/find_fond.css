@@ -1,0 +1,23 @@
+.contact{
+    width: 100%;
+    height: auto;
+    /*border: 1px solid red;*/
+   padding-top: 2%;
+}
+.fond_display{
+    width: 100%;
+    height: auto;
+}
+.fond_display>figure{
+    width: 96%;
+    height: auto;
+    margin: auto;
+    /*border: 1px solid red;*/
+}
+.fond_display>figure>img{
+    width: 47%;
+    height: auto;
+    /*margin: 2%;*/
+    padding-left: 1.8%;
+    padding-top: 1.8%;
+}

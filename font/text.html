@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="Font-Awesome-3.2.1/css/font-awesome.min.css" rel="stylesheet">
+    <!--[if IE]>
+    <link href="Font-Awesome-3.2.1/css/font-awesome-ie7.min.css" rel="stylesheet" />
+    <![endif]-->
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    #div1{
+        width: 100%;
+        height: 600px;
+        color: antiquewhite;
+        background-color: red;
+    }
+    div:last-of-type{
+        width: 300px;
+        height: 300px;
+        color: antiquewhite;
+        background-color: black;
+        overflow: hidden;
+
+    }
+    .script{
+        width: 0;
+        height: 0;
+        border-right: 20px solid transparent;
+        border-top: 30px solid #c59c53;    //这里的30px实际上远远超出容器的高度
+       /* float: right;                      //就是为了高度超出被挡住做出梯形的效果，兼容各种机型
+        margin-left: -9px;*/
+    }
+</style>
+
+<body>
+    <div id="div1">dasdsadada</div>
+    <input value="">
+
+
+    <script src="jquery-2.1.1.js"></script>
+    <script>
+      /*  console.log();
+      $("#mydiv").text("挥洒的哈达手机看妇科撒酒疯撒酒疯了");
+        var sete=document.getElementById("mydiv");
+            sete.innerText="hsavfhjasfjsafkjsafsafsafsaffs沙发卡号撒";
+
+alert(aa="gdhgf")*/
+        aa();
+         $(function(){
+           $(window).resize(function(){
+               aa();
+           })
+         })
+         function aa(){
+         $("#div1").css({"height":$(window).height()});
+         }
+    </script>
+</body>
+</html>

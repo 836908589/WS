@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    ul li{
+        width: 100px;
+        height: 30px;
+        border: 1px solid grey;
+        list-style: none;
+        float: left;
+        text-align: center;
+        line-height: 30px;
+    }
+    .active{
+        background-color: #00b3ee;
+    }
+</style>
+<body>
+<ul>
+    <li class="active">home</li>
+    <li>nav</li>
+    <li>about</li>
+    <li>aaaa</li>
+    <li>bbbbb</li>
+</ul>
+<script src="jquery-2.1.1.js"></script>
+<script>
+    $("ul>li").click(function () {
+        $("ul>li").removeClass("active");
+        $(this).addClass("active");
+    })
+</script>
+</body>
+</html>

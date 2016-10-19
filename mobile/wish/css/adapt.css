@@ -1,0 +1,117 @@
+@media (max-width: 320px) {
+    .title_conta{
+        margin-left: 4%;
+        /*border: 1px solid red;*/
+    }
+    .carousel{
+        position: relative;
+    }
+    .carousel_container,.show_carousel{
+        width: 90.3%;
+    }
+    .bnt_right,.bnt_left{
+        width: 20px;
+        height: auto;
+        position: absolute;
+        top:50%;
+    }
+    .bnt_left{
+        left: 4%;
+    }
+    .bnt_right{
+        left: 90%;
+    }
+
+    .img_show{
+        max-width: 240px;
+        max-height: 380px;
+        height: auto;
+        /*border: 1px solid red;*/
+        background-color: white;
+        display: inline-block;
+        padding-bottom: 4%;
+        margin-left: 4%;
+        overflow: hidden;
+        cursor: pointer;
+    }
+    .carousel_part>img{
+        transform: scale(1,1);
+        margin: 30% 10% 10% 7%;
+    }
+    .carousel_part:hover.carousel_part>img{
+        margin: 5% 10% 10% 7%;
+        transform: scale(0.8,0.8);
+    }
+    .carousel_container>img{
+        margin-top: -11%;
+    }
+    .team_left>img{
+        min-width:300%;
+    }
+    .img_show{
+        margin-top: 2%;
+    }
+    .team_introduce{
+        padding-bottom: 10%;
+    }
+    .team_right{
+        width: 140%;
+        height: 100%;
+        border: 1px solid #999;
+        box-shadow: 0px 0px 10px #717171;
+        line-height: 180%;
+        margin-left: 200%;
+        margin-right: -200%;
+        margin-top: 35%;
+    }
+    .core_part{
+        width: 89%;
+        height: auto;
+        /*border: 1px solid red;*/
+    }
+    .person_info{
+        width: 100%;
+        height: auto;
+        max-height: 100%;
+        min-height: 100%;
+        /*border: 1px solid red;*/
+        display: inline-block;
+        overflow: visible;
+    }
+    .part_d{
+        display: inline-block;
+    }
+    .part_d:nth-child(1){
+        margin-left: 1%;
+        margin-top: 0%;
+    }
+    .part_d:nth-child(2){
+        margin-top: 4%;
+        margin-left: 1%;
+    }
+    .part_d:nth-child(3){
+        margin-top: 4%;
+        margin-left: 1%;
+    }
+    .map_left{
+     visibility: hidden;
+    }
+    .map_right{
+        width: 220%;
+        margin-left: -90%;
+        /*border: 1px solid red;*/
+    }
+
+}
+@media (min-width: 360px){
+    .title_conta{
+        margin-left: 11%;
+        /*border: 1px solid blue;*/
+    }
+}
+@media (min-width: 769px) {
+    .title_conta{
+        margin-left: 24%;
+        /*border: 1px solid black;*/
+    }
+}

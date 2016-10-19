@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .main{
+        width: 100%;
+        height: auto;
+        background-color: gainsboro;
+    }
+    .ani{
+        width: 6em;
+        height: 6em;
+        background-color: #00b3ee;
+        margin-top: 1em;
+    }
+    .div1{
+        transition: all 5s linear;
+    }
+    .div2{
+        transition: all 5s ease;
+    }
+    .div3{
+        transition: all 5s ease-in;
+    }
+    .div4{
+         transition: all 5s ease-out;
+     }
+    .div5{
+        transition: all 5s ease-in-out;
+    }
+
+
+    .main:hover .ani{
+        width: 4em;
+        height: 4em;
+        margin-left: 80%;
+        transform: rotate(360deg);
+        border-radius: 6em;
+
+        cursor: pointer;
+    }
+</style>
+<body>
+
+<div class="main">
+    <div class="ani div1"></div>
+    <div class="ani div2"></div>
+    <div class="ani div3"></div>
+    <div class="ani div4"></div>
+    <div class="ani div5"></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!--<div style="width: 200px;height: 200px;background-color: red" id="div1"></div>
+<div style="width: 200px;height: 200px;background-color: black" id="div2"></div>-->
+<!--<canvas id="mycanvas" width="500px" height="500px" style="border: 1px solid red;"></canvas>-->
+
+
+    <script>
+        var div1=document.getElementById("div1");
+
+
+        var can=document.getElementById("canvas");
+        var context=can.getContext("2d");
+        var img=new Image();
+        img.src='1.png';
+        context.fillRect(0, 0, 400, 300);
+        img.onload=function () {
+            context.drawImage(img,300,300);
+        }
+        c.shadowOffsetX = 10;
+       c.shadowOffsetY = 10;
+        c.shadowColor='rgba(100,100,100,0.5)';
+        c.shadowBlur = 1.5;
+        c.fillRect(0, 120, 100, 100);
+
+
+        var context = canvas.getContext('2d');
+              context.shadowOffsetX = 10;
+                  context.shadowOffsetY = 10;
+                  context.shadowColor = 'rgba(100,100,100,0.5)';
+                   context.shadowBlur = 1.5;
+                    context.fillStyle = 'rgba(255,0,0,0.5)';
+                  context.fillRect(100, 100, 200, 100);
+
+
+       var div1=document.getElementById("div1");
+       var div2=document.getElementById("div2");
+
+        function aa(obj) {
+            obj.onclick=function () {
+            alert("第一个");
+        }
+        }
+       function bb(divName) {
+           divName.onclick=function () {
+               alert("第二个");
+           }
+       }
+
+       var a=new aa(div1);
+       var b=new bb(div2);
+        div1.addEventListener("click",aa);
+    function aa(age,name,id) {
+        this.age=age;
+        this.name=name;
+        this.id=id;
+    }
+    var bb=new aa(11,"张三",1234456);
+    console.log(bb.name);
+
+ function aa() {
+      name="张三";
+ }
+        var bb=new aa();
+        console.log(bb.name)
+        var bengin=1.5*Math.PI;
+        var b=bengin;
+        var d=0.1;
+        var endDeg=3.5*Math.PI;
+        var setIn=setInterval(aa,1);
+        function aa() {
+            var canv=document.getElementById("canvas");
+            var c=canv.getContext("2d");
+
+            var a=3.5*Math.PI/1000;
+            c.clearRect(0,0,400,400);
+                b=b+a;
+                d=d+0.175;
+            c.beginPath();
+            c.arc(200,150,100,bengin,b);
+            c.stroke();
+            /*console.log(b);*/
+            function  text() {
+                c.beginPath();
+                /*         c.strokeStyle='#000';*/
+                c.font="40px Arial";
+                c.strokeText(d.toFixed(0)+"%",170,160);
+              /*  console.log(b.toFixed(0));*/
+            }
+            text();
+            if(b>=endDeg){
+                clearInterval(setIn);
+
+            }
+
+
+        }
+
+    </script>
+</body>
+</html>
