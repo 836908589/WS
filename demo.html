@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    section {
+        width: 100%;
+        height: 700px;
+        outline: none
+    }
+
+    ::selection {
+        background-color: whitesmoke;
+    }
+
+    ::-moz-selection {
+        background-color: whitesmoke;
+    }
+</style>
+<body>
+<section>
+    <input type="text" class="userName">
+    <input type="password" class="passWord">
+    <input type="button" class="valBtn" value="登录">
+    <img src="http://192.168.0.110:8080/SpringHibernateWish/verify/code" alt="这是一张图片" id="imgSrc"/>
+    <input type="text" placeholder="验证码" class="imgVal">
+    <input type="button" value="换验证码" class="chengeImg"/>
+</section>
+
+<script src="./yuantuan/jquery-2.1.1.js"></script>
+<script src="md5.js"></script>
+
+<script>
+
+    $(".chengeImg").click(function () {
+        $("#imgSrc").attr("src",$("#imgSrc").attr("src")+ "?nocache=" + new Date().getTime());
+    });
+
+    /*  console.log(hex_md5(pass));*/
+    $(".valBtn").click(function () {
+        var name = $(".userName").val();
+        var pass = $(".passWord").val();
+        var imgVal = $(".imgVal").val();
+//        alert(hex_md5(pass));
+        $.ajax({
+                    type: "post",
+                    url: "http://192.168.0.110:8080/SpringHibernateWish/loginByWeb",
+                    dataType: "JSONP",
+                    synec: true,
+                    data: {
+                        "userName": name,
+                        "password": hex_md5(pass), /*提交给后台的数据格式*/
+                        "loginDevice": "",//判断用pc还是移动端登录;
+                        "veryCode": imgVal,//验证码;
+                    },
+                    jsonp: "callbackparam",//callbackparam后台接受数据的类型的函数
+                    jsonpCallback: "success_jsonpCallback",//固定的写法
+                    success: function (json) {
+                        alert(json.msg);
+                    },
+                    error: function () {
+                        alert("错误");
+                    }
+
+
+                }
+        )
+    })
+
+
+</script>
+</body>
+</html>
