@@ -4,20 +4,54 @@
     font-family: "微软雅黑";
     font-weight: 500;
 }
+
 body, html {
     background-color: white;
 }
+
 /*中间居中部分*/
-.main {
+.pub-main {
     width: 32%;
     min-width: 500px;
     max-width: 500px;
     height: auto;
-    margin: auto;
     padding-top: 5%;
+    margin-left: -250px;
+    position: relative;
+    left: 50%;
+
+    min-height: 620px;
 }
+input {
+    width: 320px;
+    height: 43px;
+    outline: none;
+    border: none;
+    border: 1px solid #E7E7E7;
+    color: #7F7E7E;
+    border-radius: 4px;
+    text-indent: 10px;
+}
+
+/*标题部分*/
+.lang {
+    width: 100%;
+    height: auto;
+    color: #333;
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 4%;
+}
+
+.lang + h2 {
+    text-align: center;
+    color: #999;
+    text-indent: 12px;
+    font-size: 18px;
+}
+
 /*表单部分居中*/
-.auto{
+.pub-auto {
     width: 80%;
     height: auto;
     margin-left: 10%;
@@ -25,39 +59,98 @@ body, html {
     background-color: white !important;
     border-radius: 6px;
     border: 1px solid #E7E7E7;
+    box-shadow: 0px 0px 10px 0px #999;
+    margin-top: 5%;
+
 }
+.pub-auto > section {
+    width: 80%;
+    height: auto;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10%;
+    margin-bottom: 4%;
+    display: inline-block;
+}
+
 /*input包裹部分*/
-.input_text {
+.pub-input-contact {
     width: 100%;
     height: 43px;
     position: relative;
     clear: both;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     /*border: 1px solid red;*/
 }
+
 /*input中的提示span标签*/
-.input_text-span {
+.pub-span {
     width: 310px;
     height: 22px;
     position: absolute;
     display: inline-block;
-    font-size: 14px;
+    font-size: 12px;
     top: 100%;
     left: 12px;
     color: #7F7E7E;
     z-index: 1;
     color: red;
-    line-height: 30px;
     overflow: hidden;
-    text-overflow:ellipsis;
+    text-overflow: ellipsis;
     /*border: 1px solid red;*/
     display: block;
-    line-height: 26px;
+    line-height: 24px;
 }
+
 /*。input_text下面的input样式*/
-.input_text-input {
+.pub-input {
     background: none;
     position: absolute;
     background-color: transparent;
     z-index: 10;
+}
+
+/*按钮样式*/
+.pub-btn {
+    background: #333;
+    border: 2px solid #333;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+}
+
+.pub-btn:hover {
+    transition: all 0.2s linear;
+    background: #fff;
+    border: 2px solid #333;
+    color: #333333;
+}
+/*a标签样式*/
+a{
+    color: #333;
+    font-size: 12px;
+    text-decoration: none;
+}
+/*页尾部分*/
+footer {
+    width: 100%;
+    height: auto;
+    background: #333333;
+    margin-top: 5%;
+}
+
+.pub-footer {
+    padding: 4% 0% 4% 0%;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    letter-spacing: 1px;
+}
+/*间隙调节*/
+.ma_top5 {
+    margin-top: 5%;
+}
+
+.ma_top10 {
+    margin-top: 10%;
 }
