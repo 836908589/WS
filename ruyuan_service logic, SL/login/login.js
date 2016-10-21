@@ -51,8 +51,6 @@ function loginAction() {
             error: function () {
                 alert("错误");
             }
-
-
         }
     )
 }

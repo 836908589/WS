@@ -1,7 +1,7 @@
 /**
  * Created by ThinkPad User on 2016/10/21.
  */
-function  aa() {
+function  forget() {
     var forgrt_id = $(".forgrt-id").val();
     var forget_email = $(".forget-email").val();
     $.ajax({
