@@ -4,7 +4,9 @@
     font-family: "微软雅黑";
     font-weight: 500;
 }
-
+h2{
+    letter-spacing: 2px;
+}
 body, html {
     background-color: white;
 }
@@ -153,4 +155,7 @@ footer {
 
 .ma_top10 {
     margin-top: 10%;
+}
+.ma_top20{
+    margin-top: 18%;
 }
