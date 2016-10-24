@@ -43,13 +43,19 @@ function loginAction() {
                 "loginDevice": "",//判断用pc还是移动端登录;
                 "veryCode": veryCode,//验证码;
             },
-            jsonp: "callbackparam",//callbackparam后台接受数据的类型的函数
-            jsonpCallback: "success_jsonpCallback",//固定的写法
+            jsonp: "callbackparam",//callbackparam后台接受数据的类型的函数//jsonp传到后太的参数//callbackparam名字随便取但是要和后台参数一致
+            jsonpCallback: "success_jsonpCallback",//固定的写法//jsonp回调函数的参数//
             success: function (json) {
-                alert(json.msg);
+                // alert(json.msg);    //返回0成功//返回1失败；
+                if(json.code=="0"){
+                        console.log("登陆成功！")
+                }else{
+                    console.log("登陆成功！")
+                };
+
             },
             error: function () {
-                alert("错误");
+                alert("后台的哥子睡戳了");//后台的哥子睡戳了
             }
         }
     )

@@ -51,6 +51,9 @@ input {
     text-indent: 12px;
     font-size: 18px;
 }
+h2{
+    text-indent: 0px !important;
+}
 
 /*表单部分居中*/
 .pub-auto {
@@ -132,6 +135,9 @@ a{
     color: #333;
     font-size: 12px;
     text-decoration: none;
+}
+a:hover{
+
 }
 /*页尾部分*/
 footer {

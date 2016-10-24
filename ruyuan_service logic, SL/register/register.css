@@ -1,0 +1,9 @@
+.la_pass {
+    float: right;
+}
+.la_pass:hover{
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    color: #398DEE;
+}

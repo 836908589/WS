@@ -39,7 +39,6 @@
 
 }
 
-
 footer {
     width: 100%;
     height: auto;
@@ -48,6 +47,9 @@ footer {
 .la_pass:hover,
 .la_register:hover {
     color: #398DEE;
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    transition: all 0.2s linear;
 }
 
 .have_id, .login_jump {
