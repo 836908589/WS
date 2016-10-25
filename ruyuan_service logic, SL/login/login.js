@@ -6,7 +6,6 @@ $(".chengeImg").click(function () {
     $("#imgSrc").attr("src", $("#imgSrc").attr("src") + "?nocache=" + new Date().getTime());
 });
 /*改变验证码end*/
-
 function loginAction() {
     var password = $("#password").val();
     var userName = $("#userName").val();
@@ -47,11 +46,12 @@ function loginAction() {
             jsonpCallback: "success_jsonpCallback",//固定的写法//jsonp回调函数的参数//
             success: function (json) {
                 // alert(json.msg);    //返回0成功//返回1失败；
-                if(json.code=="0"){
-                        console.log("登陆成功！")
-                }else{
-                    console.log("登陆成功！")
-                };
+                if (json.code == "0") {
+                    console.log("登陆成功！");
+                } else {
+                    console.log("登陆成功！");
+                }
+                ;
 
             },
             error: function () {
@@ -60,3 +60,44 @@ function loginAction() {
         }
     )
 }
+
+
+
+/*window.onload = function(){
+
+ //首先获得body中的3个input元素
+ var msg = document.getElementById("userName");
+ var getData = document.getElementById("getData");
+ var setData = document.getElementById("setData");
+
+ setData.onclick = function()//存入数据
+ {
+ if(msg.value)
+ {
+ localStorage.setItem("data", msg.value);
+ alert("信息已保存到data字段中");
+ }
+ else
+ {
+ alert("信息不能为空");
+ }
+ }
+
+ getData.onclick = function()//获取数据
+ {
+ var msg = localStorage.getItem("data");
+ if(msg)
+ {
+ alert("data字段中的值为：" + msg);
+ }
+ else
+ {
+ alert("data字段无值！");
+ }
+ }
+ }
+ */   /*<input id="msg" type="text"/>
+ <input id="setData" type="button" value="保存数据"/>
+ <input id="getData" type="button" value="获取数据"/>*/
+
+

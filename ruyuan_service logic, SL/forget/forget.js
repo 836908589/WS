@@ -1,33 +1,32 @@
 /**
  * Created by ThinkPad User on 2016/10/21.
  */
+/*$(window).resize(function () {
+ myCenter();
+ });*/
 
-
-function box() {
-    var box="<div class='bomb_box'>" +
-        "<img src="+"../img/成功.png"+">"+
-        "<span>已成功发送至您的邮箱</span>"
-        +"</div>";
-    $(".pub-main").append(box);
-}
-
-$(window).resize(function(){
-    myCenter();
-});
 function myCenter() {
-    var bomb_w=$(".bomb_box").width()/2;
-    var bomb_h=$(".bomb_box").height()/2;
-    var width=$(window).width();
-    var height=$(window).height();
-    // alert(width/2-bomb_w);
-    $(".bomb_box").css({"left":width/2-bomb_w,"top":height/2-bomb_h});
+     var box = "<div class='bg'>" +
+        "<div class='bomb_box'>" +
+        "<img src=" + "../img/成功.png" + ">" +
+        "<span>已成功发送至您的邮箱</span>"
+        + "<input type='button' value='确定' class='sure' onclick='sure()'/>" +
+        "</div>" +
+        "</div>";
+    $(".pub-main").append(box);
+    var bomb_w = $(".bomb_box").width() / 2;
+    var bomb_h = $(".bomb_box").height() / 2;
+    var width = $(window).width();
+    var height = $(window).height();
+    $(".bomb_box").css({"left": width / 2 - bomb_w, "top": height / 2 - bomb_h});
+    $(".bg").css({"width": width, "height": height});
 };
-myCenter();
 
-function  forget() {
+
+function forget() {
     var forgrt_id = $(".forgrt-id").val();
     var forget_email = $(".forget-email").val();
-    $.ajax({
+  /*  $.ajax({
         type: "post",
         url: "http://192.168.191.2:8080/SpringHibernateWish/user/findPassWordByWeb",
         dataType: "JSONP",
@@ -36,18 +35,25 @@ function  forget() {
             "userName": forgrt_id,
             "email": forget_email
         },
-        jsonp:"callbackparam",
-        success:function (json) {
+        jsonp: "callbackparam",
+        success: function (json) {
             alert(json.code);
-            if(json.code=="0"){
-                box();
-            }else{
+            if (json.code == "0") {
+
+            } else {
 
             }
         },
-        error:function () {
+        error: function () {
             alert("错误");
 
         }
-    })
+    })*/
 }
+$(".outBox").click(function () {
+    $(".outBox").bind("click",myCenter());
+});
+
+function sure(){
+    $(".bg").remove();
+};
