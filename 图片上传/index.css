@@ -1,0 +1,28 @@
+.file-box {
+    position: relative;
+    width: 120px;
+    height: 40px;
+    border: 1px solid #CDCDCD;
+    text-align: center;
+    line-height: 40px;
+}
+
+.file {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 80px;
+    height: 40px;
+    filter: alpha(opacity:0);
+    opacity: 0;
+    width: 120px
+}
+#imgShow{
+    width: 30%;
+    height: auto;
+    border: 1px solid red;
+}
+#imgShow>img{
+    width: 100%;
+    height: auto;
+}

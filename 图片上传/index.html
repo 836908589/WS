@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css">
+    <title>Title</title>
+</head>
+<body>
+<!--<div class="file-box">
+        <input type='text' name='textfield' id='textfield' class='txt'/>
+        <input type='button' class='btn' value='选择图片'/>
+        <input type="file" name="fileField" class="file" id="fileField" onchange="getImgURL(this)"/>
+        <input type="submit" name="submit" class="btn" value="上传"/>
+    <div class="show">
+        <img src="" class="imgshow">
+    </div>-->
+<div class="file-box">
+    <div id="ImgBox"  class="ImgBox" class="btn" class="file-box" onchange="imgFile()">选择图片
+        <input type="file" id="asd" class="file"/>
+    </div>
+</div>
+<div id="imgShow"></div>
+<script src="../jquery-2.1.1.js"></script>
+<script>
+    var fileBox = document.getElementById("asd");
+    var ImgBox = document.getElementById("imgShow");
+function imgFile(){
+        var files_array = fileBox.files;
+        console.log(files_array);
+        if(files_array[0].type.match(/image/)){/*通过正则验证*/
+            read_image_file(files_array[0]);
+        }
+    };
+
+    function read_image_file(file){
+        var reader = new FileReader();
+        reader.onload = function(e){        //文件读取完后触发
+            var image_contents = e.target.result;//target 事件属性可返回事件的目标节点（触发该事件的节点），如生成事件的元素、文档或窗口。
+            var img = document.createElement("img");
+            img.src = image_contents;
+            ImgBox.innerHTML="";
+            ImgBox.appendChild(img);
+        };
+        reader.readAsDataURL(file);//读取目标url
+    }
+</script>
+</body>
+</html>

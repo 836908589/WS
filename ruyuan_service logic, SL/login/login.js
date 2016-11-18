@@ -33,7 +33,7 @@ function loginAction() {
     }
     $.ajax({
             type: "post",
-            url: "http://192.168.191.2:8080/SpringHibernateWish/loginByWeb",
+            url: "http://192.168.191.3:8080/ROOT/loginByWeb",
             dataType: "JSONP",
             synec: true,
             data: {
@@ -47,7 +47,8 @@ function loginAction() {
             success: function (json) {
                 // alert(json.msg);    //返回0成功//返回1失败；
                 if (json.code == "0") {
-                    console.log("登陆成功！");
+                    console.log("登陆成功");
+                    window.location.href="../index/index.html";
                 } else {
                     console.log("登陆成功！");
                 }
